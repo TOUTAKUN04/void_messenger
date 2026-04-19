@@ -34,3 +34,6 @@ assignees: toutakun04
 
 ## Additional Context
 <!-- Any other relevant info -->
+
+---
+> For security vulnerabilities, do not open an issue — email **support@void.toutakun04.qzz.io** instead.
