@@ -13,6 +13,7 @@
 
 If you discover a security issue in VOID, contact us privately:
 
+- Via email at **support@void.toutakun04.qzz.io**
 - Via the contact form at [void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)
 
 We aim to respond within **72 hours** and will keep you updated on the fix timeline.
