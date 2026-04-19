@@ -1,9 +1,9 @@
 ---
-name: Bug Report
-about: Report a bug in VOID Messenger
-title: '[BUG] '
-labels: bug
-assignees: toutakun04
+Name: Bug Report
+About: Report a bug in VOID Messenger
+Title: '[BUG] '
+Labels: bug
+Assignees: toutakun04
 ---
 
 ## VOID Version
