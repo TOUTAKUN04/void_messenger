@@ -1,7 +1,7 @@
 # void_messenger
 Official APK releases for VOID Messenger — end-to-end encrypted, zero knowledge messaging for Android.
-# VOID Releases
 
+# VOID Releases
 Official APK releases for **VOID Messenger** — a privacy-first encrypted messaging app for Android.
 
 > Source code is maintained in a private repository. This repo exists solely for distributing signed release builds.
@@ -10,7 +10,7 @@ Official APK releases for **VOID Messenger** — a privacy-first encrypted messa
 
 ## Download
 
-**Latest:** [v2.1.3](https://github.com/toutakun04/void-releases/releases/latest)
+**Latest:** [v2.2.0](https://github.com/toutakun04/void-releases/releases/latest)
 
 Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to download directly.
 
@@ -33,7 +33,7 @@ Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to downloa
 All releases are signed with the VOID release keystore. You can verify the signature using `apksigner`:
 
 ```bash
-apksigner verify --print-certs void-2.1.3.apk
+apksigner verify --print-certs void-2.2.0.apk
 ```
 
 The certificate SHA-1 should match the one published on the official site.
@@ -48,7 +48,25 @@ VOID is an end-to-end encrypted messaging app built around one principle — you
 - **No phone number required** — sign up with Google or email
 - **Zero data collection** — no analytics, no tracking, no metadata
 - **Server-side queue only** — messages deleted from server immediately on delivery
+- **Group messaging** — fully E2EE group chats with per-member key delivery
 - **Open architecture** — Cloudflare Workers + Supabase + Backblaze B2
+
+---
+
+## Features
+
+| Feature | Status |
+|--------|--------|
+| 1:1 E2EE messaging | ✅ |
+| Group messaging (E2EE) | ✅ |
+| Voice messages | ✅ |
+| Media sharing | ✅ |
+| Message reactions | ✅ |
+| Reply to messages | ✅ |
+| Chat wallpapers | ✅ |
+| Read receipts | ✅ |
+| Google & email sign-in | ✅ |
+| No phone number required | ✅ |
 
 ---
 
@@ -63,6 +81,23 @@ Current channel: **Beta**
 
 ---
 
+## Changelog
+
+### v2.2.0
+- Group messaging with full E2EE
+- Message reactions with floating picker UI
+- Chat wallpapers (per-chat and global)
+- Voice message UI overhaul
+- Reply bubble and thumbnail improvements
+- Privacy-first presence — no last_seen tracking
+- Notification lock screen privacy hardened
+- Retry logic overhaul with 20s intelligent timeout
+
+### v2.1.3
+- Previous stable release
+
+---
+
 ## Links
 
 - Website: [void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)
@@ -73,7 +108,7 @@ Current channel: **Beta**
 
 ## Reporting Issues
 
-Found a bug or security issue? 
+Found a bug or security issue?
 
 - **Security vulnerabilities** — contact privately via the website
 - **General bugs** — open an [Issue](https://github.com/toutakun04/void-releases/issues) on this repo
