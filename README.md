@@ -10,7 +10,7 @@ Official APK releases for **VOID Messenger** — a privacy-first encrypted messa
 
 ## Download
 
-**Latest:** [v2.2.0](https://github.com/toutakun04/void-releases/releases/latest)
+**Latest:** [v2.2.1](https://github.com/toutakun04/void-releases/releases/latest)
 
 Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to download directly.
 
@@ -33,7 +33,7 @@ Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to downloa
 All releases are signed with the VOID release keystore. You can verify the signature using `apksigner`:
 
 ```bash
-apksigner verify --print-certs void-2.2.0.apk
+apksigner verify --print-certs void-2.2.1.apk
 ```
 
 The certificate SHA-1 should match the one published on the official site.
