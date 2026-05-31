@@ -1,6 +1,3 @@
-# void_messenger
-Official APK releases for VOID Messenger — end-to-end encrypted, zero knowledge messaging for Android.
-
 # VOID Releases
 Official APK releases for **VOID Messenger** — a privacy-first encrypted messaging app for Android.
 
@@ -10,7 +7,7 @@ Official APK releases for **VOID Messenger** — a privacy-first encrypted messa
 
 ## Download
 
-**Latest:** [v2.2.1](https://github.com/toutakun04/void-releases/releases/latest)
+**Latest:** [v2.3.9](https://github.com/toutakun04/void-releases/releases/latest)
 
 Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to download directly.
 
@@ -33,7 +30,7 @@ Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to downloa
 All releases are signed with the VOID release keystore. You can verify the signature using `apksigner`:
 
 ```bash
-apksigner verify --print-certs void-2.2.1.apk
+apksigner verify --print-certs void-2.3.9.apk
 ```
 
 The certificate SHA-1 should match the one published on the official site.
@@ -58,13 +55,19 @@ VOID is an end-to-end encrypted messaging app built around one principle — you
 | Feature | Status |
 |--------|--------|
 | 1:1 E2EE messaging | ✅ |
-| Group messaging (E2EE) | ✅ |
+| Group messaging (E2EE) | ✅ Beta |
 | Voice messages | ✅ |
+| File attachments | ✅ |
 | Media sharing | ✅ |
 | Message reactions | ✅ |
 | Reply to messages | ✅ |
 | Chat wallpapers | ✅ |
 | Read receipts | ✅ |
+| Calls | ⚠️ Alpha |
+| Contacts page | ✅ |
+| In-app bug reporting | ✅ |
+| Change display name | ✅ |
+| Delete account | ✅ |
 | Google & email sign-in | ✅ |
 | No phone number required | ✅ |
 
@@ -82,6 +85,39 @@ Current channel: **Beta**
 ---
 
 ## Changelog
+
+### v2.3.9
+
+**New Features**
+- Contacts page — view and manage your VOID connections in one place
+- In-app bug reporting — report issues directly without leaving VOID
+- Change display name from account settings
+- Full account deletion — removes your data from VOID servers permanently
+- File attachments — send documents in chat with inline filename, size, and download action
+- Call log management — delete individual entries from call history
+
+**Bug Fixes**
+- Fixed message loading animation looping indefinitely
+- Fixed long-press context menu not dismissing correctly
+- Fixed self-chat edge cases causing incorrect read receipt states
+- Fixed `moddatetime` trigger not firing on profile updates — stale avatar cache resolved
+- Fixed orphaned B2 media on delete failure — `media_status` only removed if B2 DELETE succeeds
+- Fixed avatar not refreshing after profile update
+- Groups stability fixes — groups now workable in beta
+- Calls stability fixes — calls functional in alpha
+
+**Privacy & Security**
+- Delete-for-Everyone window now enforced server-side — late attempts rejected cleanly
+- B2 media deletion wired to delete-for-everyone signal — file removed from Backblaze immediately
+- Undelivered messages hard-deleted after 7 days — sender receives delivery failure notification
+- Profile sync overhauled — display name and avatar consistent across devices via server-side timestamps
+
+**Under the Hood**
+- Database migration v13 → v14 with improved message and media state tracking
+- Reduced unnecessary recomposition in message list
+- Minor performance improvements to media loading pipeline
+
+---
 
 ### v2.2.0
 - Group messaging with full E2EE
@@ -111,7 +147,7 @@ Current channel: **Beta**
 Found a bug or security issue?
 
 - **Security vulnerabilities** — contact privately via the website
-- **General bugs** — open an [Issue](https://github.com/toutakun04/void-releases/issues) on this repo
+- **General bugs** — open an [Issue](https://github.com/toutakun04/void-releases/issues) on this repo or use the in-app bug reporter
 
 ---
 
