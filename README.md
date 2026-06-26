@@ -7,7 +7,7 @@ Official APK releases for **VOID Messenger** — a privacy-first encrypted messa
 
 ## Download
 
-**Latest:** [v3.0.1](https://github.com/toutakun04/void-releases/releases/latest)
+**Latest:** [v3.0.1](https://github.com/TOUTAKUN04/void_messenger/releases/latest)
 
 Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to download directly.
 
@@ -15,7 +15,7 @@ Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to downloa
 
 ## Installation
 
-1. Download the APK from the [Releases](https://github.com/toutakun04/void-releases/releases) page
+1. Download the APK from the [Releases](https://github.com/TOUTAKUN04/void_messenger/releases) page
 2. On your Android device, enable **Install from unknown sources**
    - Settings → Apps → Special app access → Install unknown apps
 3. Open the downloaded APK and install
