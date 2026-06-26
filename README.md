@@ -63,7 +63,7 @@ VOID is an end-to-end encrypted messaging app built around one principle — you
 | Reply to messages | ✅ |
 | Chat wallpapers | ✅ |
 | Read receipts | ✅ |
-| Calls | ⚠️ Alpha |
+| Calls | ✅ Beta |
 | Contacts page | ✅ |
 | In-app bug reporting | ✅ |
 | Change display name | ✅ |
