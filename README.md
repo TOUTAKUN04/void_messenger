@@ -7,7 +7,7 @@ Official APK releases for **VOID Messenger** — a privacy-first encrypted messa
 
 ## Download
 
-**Latest:** [v3.0.1](https://github.com/TOUTAKUN04/void_messenger/releases/latest)
+**Latest:** [v3.0.2](https://github.com/TOUTAKUN04/void_messenger/releases/latest)
 
 Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to download directly.
 
@@ -30,7 +30,7 @@ Or visit **[void.toutakun04.qzz.io](https://void.toutakun04.qzz.io)** to downloa
 All releases are signed with the VOID release keystore. You can verify the signature using `apksigner`:
 
 ```bash
-apksigner verify --print-certs void-3.0.1.apk
+apksigner verify --print-certs void-3.0.2.apk
 ```
 
 The certificate SHA-1 should match the one published on the official site.
@@ -70,6 +70,9 @@ VOID is an end-to-end encrypted messaging app built around one principle — you
 | Delete account | ✅ |
 | Google & email sign-in | ✅ |
 | No phone number required | ✅ |
+| AXIOM AI chat | ✅ |
+| AXIOM voice transcription (Groq Whisper) | ✅ |
+| Online presence (10-min window) | ✅ |
 
 ---
 
@@ -85,6 +88,33 @@ Current channel: **Beta**
 ---
 
 ## Changelog
+
+### v3.0.2
+
+**New Features**
+- AXIOM voice transcription — voice notes in AXIOM chat now transcribe server-side via Groq Whisper. Works on every Android version (previously required Android 13+ and Google's speech service, which most devices don't honor)
+- Online presence — users stay online for 10 minutes after leaving the app instead of going offline instantly; active users keep their window refreshed by heartbeats
+
+**Bug Fixes**
+- Fixed media re-download loop — received images were being re-downloaded repeatedly (up to 7× per image). Cache files now use deterministic names, the auto-download gate also checks the file on disk, and missing cache rows self-heal
+- Fixed read receipts never arriving when the sender was offline — receipts were applied before message sync completed and were silently dropped; now applied only after the chat is synced
+- Fixed call history showing raw user IDs (UUIDs) instead of display names — names are now resolved at record time and backfilled for old entries
+- Fixed AXIOM voice notes sometimes sending a stray "." message — silent/short recordings transcribed as "." by Whisper are now treated as a failed transcription
+- Fixed direct-message FCM payloads missing `message_id` — read-receipt pushes could not be matched to a message
+- Fixed FCM pushes being rejected entirely by the push service — reserved `message_type` data key renamed to `msg_type`
+- Fixed read receipt / delivery state not updating for messages sent while the sender was offline
+
+**AXIOM Worker**
+- Gemini 2.5-flash model upgrade
+- Tier-2 search digest, question-word gating, confusion/fallback escalation
+- `/transcribe` endpoint (Groq Whisper, JWT-authed)
+
+**Under the Hood**
+- Toast error handling and navigation error-consumed callbacks
+- Splash screen improvements
+- Presence: online window extended from 90 seconds to 10 minutes with no instant-offline flip; no cron sweeps — expiry is computed at read time
+
+---
 
 ### v3.0.1
 
