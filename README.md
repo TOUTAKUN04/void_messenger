@@ -1,5 +1,5 @@
 # VOID Releases
-Official APK releases for **VOID Messenger** — a privacy-first encrypted messaging app for Android.
+Official APK releases for **VOID Messenger**  a privacy-first encrypted messaging app for Android.
 
 > Source code is maintained in a private repository. This repo exists solely for distributing signed release builds.
 
